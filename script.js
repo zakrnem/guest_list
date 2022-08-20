@@ -5,9 +5,6 @@ const refused = document.querySelector('.refused');
 admitted.textContent = 'Admit: ';
 refused.textContent = 'Refuse: ';
 
-
-// loop starts here
-
 for (i = people.length-1 ; i >= 0; i--) {
     if (people[i] === "Phil" || people[i] === "Lola") {
         refused.textContent += people[i] + ", ";
@@ -16,5 +13,6 @@ for (i = people.length-1 ; i >= 0; i--) {
         admitted.textContent += people[i] + ", ";
     }
 }
-// refused.textContent += ;
-// admitted.textContent += ;
+
+refused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + '.';
+admitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + '.';
